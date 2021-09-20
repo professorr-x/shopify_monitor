@@ -1,0 +1,8 @@
+<form method="POST" action='/monitor/'>
+{% csrf_token %}
+<input type="text" id="webhook_url" name="webhook_url" placeholder="webhook_url" required><br> 
+<textarea id="watch_list" name="watch_list" rows="4" cols="50">
+
+</textarea>
+<input type="submit" id="submit" name="submit">
+</form>
