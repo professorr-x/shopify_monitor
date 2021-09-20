@@ -209,7 +209,7 @@ def run_monitor(webhook, watch_list):
         except Exception as e:
             print(e)
             print('Delaying next request')
-            time.sleep(random.randint(0,600))
+            time.sleep(random.randint(0,20))
 
 
 def index(request):
@@ -219,7 +219,7 @@ def index(request):
         if watch_list:
             watch_list = watch_list.replace("\n","")
             watch_list = watch_list.replace("\r","")
-            watch_list.split(",")
+            watch_list = watch_list.split()
 
         run_monitor(webhook, watch_list)
         return render(
